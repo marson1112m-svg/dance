@@ -98,7 +98,11 @@ app.post('/api/chat', async (req, res) => {
   res.json(data && data.length > 0 ? data[0] : { role: 'ai', content: aiResponse });
 });
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+export default app;
