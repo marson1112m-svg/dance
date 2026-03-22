@@ -1,0 +1,8 @@
+{
+  "name": "StreetBeat AI",
+  "description": "AI-powered dance practice and analysis app for street dancers.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
